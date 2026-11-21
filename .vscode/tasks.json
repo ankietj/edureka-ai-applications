@@ -1,0 +1,102 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Demo 1: Start FastAPI Server",
+            "type": "shell",
+            "command": ".\\.venv\\Scripts\\uvicorn.exe src.main:app --host 127.0.0.1 --port 8000 --reload",
+            "options": {
+                "cwd": "${workspaceFolder}/Module_2/Demonstration 1/fastapi-llm-app"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "demo1"
+            }
+        },
+        {
+            "label": "Demo 1: Run Test Client",
+            "type": "shell",
+            "command": ".\\.venv\\Scripts\\python.exe test_api.py",
+            "options": {
+                "cwd": "${workspaceFolder}/Module_2/Demonstration 1/fastapi-llm-app"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "demo1"
+            }
+        },
+        {
+            "label": "Demo 2: Start SSE Backend (Port 8000)",
+            "type": "shell",
+            "command": ".\\.venv\\Scripts\\uvicorn.exe src.sse_backend:app --host 127.0.0.1 --port 8000 --reload",
+            "options": {
+                "cwd": "${workspaceFolder}/Module_2/Demonstration 2/streamlit-ai-streaming"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "demo2"
+            }
+        },
+        {
+            "label": "Demo 2: Start Streamlit Frontend (Port 8501)",
+            "type": "shell",
+            "command": ".\\.venv\\Scripts\\streamlit.exe run src\\app.py --server.port 8501",
+            "options": {
+                "cwd": "${workspaceFolder}/Module_2/Demonstration 2/streamlit-ai-streaming"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "demo2"
+            }
+        },
+        {
+            "label": "Demo 3: Start FastAPI Backend (Port 8000)",
+            "type": "shell",
+            "command": ".\\.venv\\Scripts\\uvicorn.exe src.fastapi_backend:app --host 127.0.0.1 --port 8000 --reload",
+            "options": {
+                "cwd": "${workspaceFolder}/Module_2/Demonstration 3/gradio-fastapi-ai-assistant"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "demo3"
+            }
+        },
+        {
+            "label": "Demo 3: Start Gradio Frontend (Port 7860)",
+            "type": "shell",
+            "command": ".\\.venv\\Scripts\\python.exe src\\app.py",
+            "options": {
+                "cwd": "${workspaceFolder}/Module_2/Demonstration 3/gradio-fastapi-ai-assistant"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "demo3"
+            }
+        },
+        {
+            "label": "Run Automated Validation Suite",
+            "type": "shell",
+            "command": "& \".\\Module_2\\Demonstration 1\\fastapi-llm-app\\.venv\\Scripts\\python.exe\" validate_all_demos.py",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}

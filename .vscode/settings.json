@@ -1,0 +1,13 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/Module_2/Demonstration 1/fastapi-llm-app/.venv/Scripts/python.exe",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/Module_2/Demonstration 1/fastapi-llm-app/src",
+        "${workspaceFolder}/Module_2/Demonstration 2/streamlit-ai-streaming/src",
+        "${workspaceFolder}/Module_2/Demonstration 3/gradio-fastapi-ai-assistant/src"
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.pytest_cache": true,
+        "**/__pycache__": true
+    }
+}

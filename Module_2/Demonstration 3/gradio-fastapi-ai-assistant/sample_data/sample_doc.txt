@@ -1,0 +1,1 @@
+Agentic AI refers to autonomous systems designed to pursue goals and make decisions with minimal human intervention. Key characteristics include proactive reasoning, persistent state, tool usage, and reflection.
